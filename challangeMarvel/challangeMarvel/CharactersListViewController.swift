@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CharactersListView: class {
-    
+    func show(items: [Character])
 }
 
 class CharactersListViewController: UIViewController {
@@ -24,4 +24,7 @@ class CharactersListViewController: UIViewController {
 
 extension CharactersListViewController: CharactersListView {
     
+    func show(items: [Character]) {
+        
+    }
 }

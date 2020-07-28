@@ -9,9 +9,24 @@
 import Foundation
 
 protocol CharactersListWorkerProtocol: class {
-    
+    func get(url: String, completion: @escaping (([Character]) -> Void))
 }
 
 class CharactersListWorker: CharactersListWorkerProtocol {
 
+    var httpClient = HTTPClient()
+    
+    func get(url: String, completion: @escaping (([Character]) -> Void)) {
+        if let url = URL(string: url) {
+            httpClient.get(url: url) { result -> Void in
+                switch result {
+                case .failure:
+                    break
+                case .success(let data):
+                    
+                    break
+                }
+            }
+        }
+    }
 }
