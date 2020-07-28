@@ -25,6 +25,8 @@
 		530F2B3224D071AF0049C1DE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B3124D071AF0049C1DE /* HTTPClient.swift */; };
 		530F2B3424D081F40049C1DE /* CharacterDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B3324D081F40049C1DE /* CharacterDataWrapper.swift */; };
 		530F2B3624D082390049C1DE /* CharacterDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B3524D082390049C1DE /* CharacterDataContainer.swift */; };
+		530F2B3924D090D30049C1DE /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B3824D090D30049C1DE /* HTTPClientTests.swift */; };
+		530F2B3A24D091390049C1DE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B3124D071AF0049C1DE /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		530F2B3124D071AF0049C1DE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		530F2B3324D081F40049C1DE /* CharacterDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataWrapper.swift; sourceTree = "<group>"; };
 		530F2B3524D082390049C1DE /* CharacterDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataContainer.swift; sourceTree = "<group>"; };
+		530F2B3824D090D30049C1DE /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				530F2B0024D051EE0049C1DE /* challangeMarvelTests.swift */,
+				530F2B3724D0908D0049C1DE /* HTTPClientTests */,
 				530F2B0224D051EE0049C1DE /* Info.plist */,
 			);
 			path = challangeMarvelTests;
@@ -172,6 +176,14 @@
 				530F2B3124D071AF0049C1DE /* HTTPClient.swift */,
 			);
 			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		530F2B3724D0908D0049C1DE /* HTTPClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				530F2B3824D090D30049C1DE /* HTTPClientTests.swift */,
+			);
+			path = HTTPClientTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530F2B3924D090D30049C1DE /* HTTPClientTests.swift in Sources */,
 				530F2B0124D051EE0049C1DE /* challangeMarvelTests.swift in Sources */,
+				530F2B3A24D091390049C1DE /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
