@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CharactersListView: class {
-    
+    func show(items: [Character])
 }
 
 class CharactersListViewController: UIViewController {
@@ -18,10 +18,13 @@ class CharactersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        interactor?.onViewLoad()
     }
 }
 
 extension CharactersListViewController: CharactersListView {
     
+    func show(items: [Character]) {
+        
+    }
 }

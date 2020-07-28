@@ -10,6 +10,7 @@ import Foundation
 
 protocol CharactersListPresentable: class {
     var view: CharactersListView? { get }
+    func showItems(items: [Character])
 }
 
 final class CharactersListPresenter: CharactersListPresentable {
@@ -20,4 +21,7 @@ final class CharactersListPresenter: CharactersListPresentable {
         self.view = view
     }
 
+    func showItems(items: [Character]) {
+        view?.show(items: items)
+    }
 }
