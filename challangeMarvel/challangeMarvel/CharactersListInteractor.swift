@@ -28,7 +28,7 @@ class CharactersListInteractor: CharactersListInteractorProtocol {
     }
     
     func onViewLoad() {
-        worker.get(url: url) { items in
+        worker.get(url: url, publicKey: publicKey, privateKey: privateKey) { items in
             self.items = items
             self.presenter.showItems(items: items)
         }
