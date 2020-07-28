@@ -9,9 +9,9 @@
 import Foundation
 
 struct ComicList: Codable {
-    let available: Int
-    let returned: Int
-    let collectionURI: String
-    let items: [ComicSummary]
+    let available: Int?
+    let returned: Int?
+    let collectionURI: String?
+    let items: [ComicSummary]?
 }
 

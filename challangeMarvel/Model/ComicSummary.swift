@@ -9,7 +9,7 @@
 import Foundation
 
 struct ComicSummary: Codable {
-    let resourceURI: String
-    let name: String
+    let resourceURI: String?
+    let name: String?
 }
 

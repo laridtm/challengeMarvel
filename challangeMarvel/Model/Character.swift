@@ -9,10 +9,10 @@
 import Foundation
 
 struct Character: Codable {
-    let id: Int
-    let name: String
-    let description: String
-    let modified: Date
-    let thumbnail: Image
-    let comics: ComicList
+    let id: Int?
+    let name: String?
+    let description: String?
+    let modified: String?
+    let thumbnail: Image?
+    let comics: ComicList?
 }
