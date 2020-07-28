@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol CharactersListView: class {
+    
+}
+
+class CharactersListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,3 +22,6 @@ class ViewController: UIViewController {
 
 }
 
+extension CharactersListViewController: CharactersListView {
+    
+}
