@@ -16,11 +16,11 @@ protocol CharacterDetailsInteractorProtocol {
 class CharacterDetailsInteractor: CharacterDetailsInteractorProtocol {
     
     private let presenter: CharacterDetailsPresentable
-    private let worker: CharactersDetailsWorkerProtocol
+    private let worker: CharacterDetailsWorkerProtocol
     private var character: Character
     
     
-    init(presenter: CharacterDetailsPresentable, worker: CharactersDetailsWorkerProtocol, character: Character) {
+    init(presenter: CharacterDetailsPresentable, worker: CharacterDetailsWorkerProtocol, character: Character) {
         self.presenter = presenter
         self.worker = worker
         self.character = character

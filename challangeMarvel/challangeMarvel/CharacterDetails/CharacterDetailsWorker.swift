@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-protocol CharactersDetailsWorkerProtocol: class {
+protocol CharacterDetailsWorkerProtocol: class {
     func getCharacterImage(url: String, completion: @escaping ((UIImage?) -> Void))
     func getComics(url: String, completion: @escaping (([Comic]) -> Void))
+    func decode(data: Data) -> [Comic]?
 }
 
-class CharacterDetailsWorker: CharactersDetailsWorkerProtocol {
+class CharacterDetailsWorker: CharacterDetailsWorkerProtocol {
     
     let httpClient = HTTPClient()
     let authentication = Authentication()

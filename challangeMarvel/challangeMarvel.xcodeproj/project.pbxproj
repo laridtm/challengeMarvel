@@ -60,6 +60,9 @@
 		530F2B7324D2045D0049C1DE /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B6024D1ED670049C1DE /* Comic.swift */; };
 		530F2B7424D204600049C1DE /* ComicDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B6224D1EE270049C1DE /* ComicDataWrapper.swift */; };
 		530F2B7524D204620049C1DE /* ComicDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B6624D1EF380049C1DE /* ComicDataContainer.swift */; };
+		530F2B7824D209B50049C1DE /* CharacterDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7724D209B50049C1DE /* CharacterDetailsWorkerTests.swift */; };
+		530F2B7A24D20A200049C1DE /* CharacterDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */; };
+		530F2B7C24D20A830049C1DE /* CharacterDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		530F2B6624D1EF380049C1DE /* ComicDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDataContainer.swift; sourceTree = "<group>"; };
 		530F2B6924D1F04B0049C1DE /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		530F2B6C24D203E10049C1DE /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		530F2B7724D209B50049C1DE /* CharacterDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsWorkerTests.swift; sourceTree = "<group>"; };
+		530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 		530F2AFF24D051EE0049C1DE /* challangeMarvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				530F2B7624D209780049C1DE /* CharacterDetailsTests */,
 				530F2B6B24D2039B0049C1DE /* AuthenticationTests */,
 				530F2B4824D19C3F0049C1DE /* CharactersListTests */,
 				530F2B3724D0908D0049C1DE /* HTTPClientTests */,
@@ -301,6 +308,16 @@
 				530F2B6C24D203E10049C1DE /* AuthenticationTests.swift */,
 			);
 			path = AuthenticationTests;
+			sourceTree = "<group>";
+		};
+		530F2B7624D209780049C1DE /* CharacterDetailsTests */ = {
+			isa = PBXGroup;
+			children = (
+				530F2B7724D209B50049C1DE /* CharacterDetailsWorkerTests.swift */,
+				530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */,
+				530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */,
+			);
+			path = CharacterDetailsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +487,9 @@
 				530F2B4024D09B610049C1DE /* ComicList.swift in Sources */,
 				530F2B7124D2044A0049C1DE /* CharacterDetailsWorker.swift in Sources */,
 				530F2B0124D051EE0049C1DE /* CharactersListWorkerTests.swift in Sources */,
+				530F2B7C24D20A830049C1DE /* CharacterDetailsInteractorTests.swift in Sources */,
 				530F2B4E24D1A43E0049C1DE /* CharactersListPresenterTests.swift in Sources */,
+				530F2B7A24D20A200049C1DE /* CharacterDetailsPresenterTests.swift in Sources */,
 				530F2B3D24D09B590049C1DE /* CharacterDataWrapper.swift in Sources */,
 				530F2B7424D204600049C1DE /* ComicDataWrapper.swift in Sources */,
 				530F2B5324D1A97E0049C1DE /* CharactersListPresenter.swift in Sources */,
@@ -483,6 +502,7 @@
 				530F2B7324D2045D0049C1DE /* Comic.swift in Sources */,
 				530F2B4724D19C390049C1DE /* CharactersListInteractorTests.swift in Sources */,
 				530F2B5424D1A9810049C1DE /* CharacterViewCell.swift in Sources */,
+				530F2B7824D209B50049C1DE /* CharacterDetailsWorkerTests.swift in Sources */,
 				530F2B5024D1A9770049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B3F24D09B5F0049C1DE /* ComicSummary.swift in Sources */,
 				530F2B5224D1A97C0049C1DE /* CharactersListWorker.swift in Sources */,
