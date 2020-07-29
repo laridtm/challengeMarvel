@@ -16,10 +16,10 @@ protocol CharactersListWorkerProtocol: class {
 
 class CharactersListWorker: CharactersListWorkerProtocol {
     
-    var httpClient = HTTPClient()
+    let httpClient = HTTPClient()
     
     func get(url: String, publicKey: String, privateKey: String, completion: @escaping (([Character]) -> Void)) {
-        var urlCredentials = addCredentials(url: url, publicKey: publicKey, privateKey: privateKey)
+        let urlCredentials = addCredentials(url: url, publicKey: publicKey, privateKey: privateKey)
         
         if let apiUrl = URL(string: urlCredentials) {
             httpClient.get(url: apiUrl) { result -> Void in
@@ -28,7 +28,7 @@ class CharactersListWorker: CharactersListWorkerProtocol {
                     break
                 case .success(let data):
                     if let characters = self.decode(data: data){
-                        print(characters)
+                        completion(characters)
                     }
                     break
                 }
