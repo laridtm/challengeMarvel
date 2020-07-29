@@ -10,6 +10,7 @@ import UIKit
 
 protocol CharactersListView: class {
     func show(items: [Character])
+    func append(items: [Character])
 }
 
 class CharactersListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -59,12 +60,24 @@ class CharactersListViewController: UIViewController, UICollectionViewDelegate, 
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+         if (indexPath.row == characters.count - 20) {
+            interactor?.loadMoreData()
+         }
+    }
 }
 
 extension CharactersListViewController: CharactersListView {
     
     func show(items: [Character]) {
         self.characters = items
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func append(items: [Character]) {
+        self.characters.append(contentsOf: items)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

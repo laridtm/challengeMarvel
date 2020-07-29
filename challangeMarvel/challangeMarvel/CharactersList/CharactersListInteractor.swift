@@ -10,6 +10,7 @@ import Foundation
 
 protocol CharactersListInteractorProtocol {
     func onViewLoad()
+    func loadMoreData()
 }
 
 class CharactersListInteractor: CharactersListInteractorProtocol {
@@ -28,7 +29,14 @@ class CharactersListInteractor: CharactersListInteractorProtocol {
     func onViewLoad() {
         worker.get(url: url) { items in
             self.items = items
-            self.presenter.showItems(items: items)
+            self.presenter.show(items: items)
+        }
+    }
+    
+    func loadMoreData() {
+        worker.getMore(url: url) { items in
+            self.items.append(contentsOf: items)
+            self.presenter.append(items: items)
         }
     }
 }
