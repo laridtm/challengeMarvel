@@ -28,6 +28,8 @@ class CharactersListViewController: UIViewController, UICollectionViewDelegate, 
         collectionView.dataSource = self
         
         self.navigationController?.navigationBar.barStyle = .black
+//        let tittleImage = UIImage(named: "marvel-logo")
+//        self.navigationController?.navigationItem.titleView = UIImageView(image: tittleImage)
         self.navigationController?.navigationBar.topItem?.title = "Marvel"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         

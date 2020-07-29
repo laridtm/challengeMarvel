@@ -36,6 +36,11 @@
 		530F2B4124D09B640049C1DE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2A24D06F280049C1DE /* Image.swift */; };
 		530F2B4424D0A4890049C1DE /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */; };
 		530F2B4524D0A4890049C1DE /* CharacterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530F2B4324D0A4890049C1DE /* CharacterViewCell.xib */; };
+		530F2B4724D19C390049C1DE /* CharactersListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B4624D19C390049C1DE /* CharactersListInteractorTests.swift */; };
+		530F2B4924D19E4E0049C1DE /* CharactersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2124D058300049C1DE /* CharactersListPresenter.swift */; };
+		530F2B4A24D19E520049C1DE /* CharactersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B1D24D058080049C1DE /* CharactersListInteractor.swift */; };
+		530F2B4B24D19E550049C1DE /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2324D061680049C1DE /* CharactersListViewController.swift */; };
+		530F2B4C24D19F970049C1DE /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,7 @@
 		530F2B3824D090D30049C1DE /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
 		530F2B4324D0A4890049C1DE /* CharacterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewCell.xib; sourceTree = "<group>"; };
+		530F2B4624D19C390049C1DE /* CharactersListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +160,7 @@
 		530F2AFF24D051EE0049C1DE /* challangeMarvelTests */ = {
 			isa = PBXGroup;
 			children = (
-				530F2B0024D051EE0049C1DE /* CharactersListWorkerTests.swift */,
+				530F2B4824D19C3F0049C1DE /* CharactersListTests */,
 				530F2B3724D0908D0049C1DE /* HTTPClientTests */,
 				530F2B0224D051EE0049C1DE /* Info.plist */,
 			);
@@ -197,6 +203,15 @@
 				530F2B3824D090D30049C1DE /* HTTPClientTests.swift */,
 			);
 			path = HTTPClientTests;
+			sourceTree = "<group>";
+		};
+		530F2B4824D19C3F0049C1DE /* CharactersListTests */ = {
+			isa = PBXGroup;
+			children = (
+				530F2B4624D19C390049C1DE /* CharactersListInteractorTests.swift */,
+				530F2B0024D051EE0049C1DE /* CharactersListWorkerTests.swift */,
+			);
+			path = CharactersListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,9 +371,14 @@
 				530F2B4024D09B610049C1DE /* ComicList.swift in Sources */,
 				530F2B3C24D0993C0049C1DE /* CharactersListWorker.swift in Sources */,
 				530F2B0124D051EE0049C1DE /* CharactersListWorkerTests.swift in Sources */,
+				530F2B4B24D19E550049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B3D24D09B590049C1DE /* CharacterDataWrapper.swift in Sources */,
 				530F2B3E24D09B5C0049C1DE /* CharacterDataContainer.swift in Sources */,
 				530F2B3A24D091390049C1DE /* HTTPClient.swift in Sources */,
+				530F2B4A24D19E520049C1DE /* CharactersListInteractor.swift in Sources */,
+				530F2B4C24D19F970049C1DE /* CharacterViewCell.swift in Sources */,
+				530F2B4724D19C390049C1DE /* CharactersListInteractorTests.swift in Sources */,
+				530F2B4924D19E4E0049C1DE /* CharactersListPresenter.swift in Sources */,
 				530F2B3F24D09B5F0049C1DE /* ComicSummary.swift in Sources */,
 				530F2B3B24D098EE0049C1DE /* Character.swift in Sources */,
 				530F2B4124D09B640049C1DE /* Image.swift in Sources */,

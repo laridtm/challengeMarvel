@@ -22,8 +22,8 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="414" id="haO-b8-nQd"/>
-                        <constraint firstAttribute="height" constant="818" id="ohe-FG-Utu"/>
+                        <constraint firstAttribute="height" constant="818" id="E2n-vd-YKs"/>
+                        <constraint firstAttribute="width" constant="414" id="UaA-NE-YTm"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="yiN-dX-YUJ">
                         <size key="itemSize" width="150" height="250"/>
@@ -35,10 +35,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="nfX-FN-9Kl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="38Y-ty-ek8"/>
-                <constraint firstItem="nfX-FN-9Kl" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Ajb-Ie-GJd"/>
-                <constraint firstItem="nfX-FN-9Kl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fBy-Ui-BCm"/>
-                <constraint firstItem="nfX-FN-9Kl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tzJ-Ct-5An"/>
+                <constraint firstItem="nfX-FN-9Kl" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="AyW-Xn-1mf"/>
+                <constraint firstItem="nfX-FN-9Kl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DS9-H1-n2h"/>
+                <constraint firstItem="nfX-FN-9Kl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fBM-Nj-g88"/>
+                <constraint firstItem="nfX-FN-9Kl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lWQ-nL-b0e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
