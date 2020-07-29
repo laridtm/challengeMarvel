@@ -13,7 +13,7 @@ protocol CharactersListPresentable: class {
     func showItems(items: [Character])
 }
 
-final class CharactersListPresenter: CharactersListPresentable {
+class CharactersListPresenter: CharactersListPresentable {
     
     internal weak var view: CharactersListView?
     

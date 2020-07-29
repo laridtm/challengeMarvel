@@ -28,16 +28,10 @@ class CharactersListViewController: UIViewController, UICollectionViewDelegate, 
         collectionView.dataSource = self
         
         self.navigationController?.navigationBar.barStyle = .black
-//        let tittleImage = UIImage(named: "marvel-logo")
-//        self.navigationController?.navigationItem.titleView = UIImageView(image: tittleImage)
         self.navigationController?.navigationBar.topItem?.title = "Marvel"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         interactor?.onViewLoad()
-    }
-    
-    func searchButtonTapped(){
-        print("oi")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,16 +40,23 @@ class CharactersListViewController: UIViewController, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterViewCell
-        
-        guard let urlPath = characters[indexPath.row].thumbnail?.path else { return UICollectionViewCell() }
-        guard let urlExt = characters[indexPath.row].thumbnail?.ext else { return UICollectionViewCell() }
-        let urlImage = "\(urlPath)/portrait_xlarge.\(urlExt)"
-        cell.setCharacterImage(url: urlImage)
+        cell.setImage(url: characters[indexPath.row].getCharacterImage())
         if let characterName = characters[indexPath.row].name {
-            cell.setCharacterName(name: characterName)
+            cell.setName(name: characterName)
         }
-        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let characterSelected: Character? = characters[indexPath.row]
+        if let characterDetails = characterSelected {
+            let controllerDetails = CharacterDetailsViewController(nibName: "CharacterDetailsViewController", bundle: nil)
+            let presenterDetails = CharacterDetailsPresenter(view: controllerDetails)
+            let workerDetails = CharacterDetailsWorker()
+            let interactorDetails = CharacterDetailsInteractor(presenter: presenterDetails, worker: workerDetails, character: characterDetails)
+            controllerDetails.interactor = interactorDetails
+            self.navigationController?.present(controllerDetails, animated: true, completion: nil)
+        }
     }
     
 }

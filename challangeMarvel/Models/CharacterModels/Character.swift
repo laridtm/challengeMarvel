@@ -15,4 +15,11 @@ struct Character: Codable {
     let modified: String?
     let thumbnail: Image?
     let comics: ComicList?
+    
+    func getCharacterImage() -> String {
+        guard let urlPath = thumbnail?.path else { return "" }
+        guard let urlExt = thumbnail?.ext else { return "" }
+        let urlImage = "\(urlPath)/portrait_xlarge.\(urlExt)"
+        return urlImage
+    }
 }
