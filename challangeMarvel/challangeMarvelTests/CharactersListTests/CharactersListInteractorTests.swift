@@ -52,7 +52,7 @@ class MockCharactersListWorker: CharactersListWorkerProtocol {
     var getWasCalled = false
     var decodeWasCalled = false
     
-    func get(url: String, publicKey: String, privateKey: String, completion: @escaping (([Character]) -> Void)) {
+    func get(url: String, completion: @escaping (([Character]) -> Void)) {
         getWasCalled = true
         if let json = "[]".data(using: .utf8) {
             let result = self.decode(data: json)
