@@ -13,5 +13,12 @@ struct ComicList: Codable {
     let returned: Int?
     let collectionURI: String?
     let items: [ComicSummary]?
+    
+    init(available: Int?, returned: Int?, collectionURI: String?, items: [ComicSummary]?) {
+        self.available = available
+        self.returned = returned
+        self.collectionURI = collectionURI
+        self.items = items
+    }
 }
 
