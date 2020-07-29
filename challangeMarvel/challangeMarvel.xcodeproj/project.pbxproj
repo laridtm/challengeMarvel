@@ -34,6 +34,8 @@
 		530F2B3F24D09B5F0049C1DE /* ComicSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2E24D0706E0049C1DE /* ComicSummary.swift */; };
 		530F2B4024D09B610049C1DE /* ComicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2C24D06FFC0049C1DE /* ComicList.swift */; };
 		530F2B4124D09B640049C1DE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2A24D06F280049C1DE /* Image.swift */; };
+		530F2B4424D0A4890049C1DE /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */; };
+		530F2B4524D0A4890049C1DE /* CharacterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530F2B4324D0A4890049C1DE /* CharacterViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		530F2B3324D081F40049C1DE /* CharacterDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataWrapper.swift; sourceTree = "<group>"; };
 		530F2B3524D082390049C1DE /* CharacterDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataContainer.swift; sourceTree = "<group>"; };
 		530F2B3824D090D30049C1DE /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
+		530F2B4324D0A4890049C1DE /* CharacterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				530F2B1D24D058080049C1DE /* CharactersListInteractor.swift */,
 				530F2B1F24D0581D0049C1DE /* CharactersListWorker.swift */,
 				530F2B2124D058300049C1DE /* CharactersListPresenter.swift */,
+				530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */,
+				530F2B4324D0A4890049C1DE /* CharacterViewCell.xib */,
 				530F2AF224D051EE0049C1DE /* Assets.xcassets */,
 				530F2AF424D051EE0049C1DE /* LaunchScreen.storyboard */,
 				530F2AF724D051EE0049C1DE /* Info.plist */,
@@ -299,6 +305,7 @@
 			files = (
 				530F2B2624D061680049C1DE /* CharactersListViewController.xib in Resources */,
 				530F2AF624D051EE0049C1DE /* LaunchScreen.storyboard in Resources */,
+				530F2B4524D0A4890049C1DE /* CharacterViewCell.xib in Resources */,
 				530F2AF324D051EE0049C1DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +339,7 @@
 				530F2B2524D061680049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B3624D082390049C1DE /* CharacterDataContainer.swift in Sources */,
 				530F2B3224D071AF0049C1DE /* HTTPClient.swift in Sources */,
+				530F2B4424D0A4890049C1DE /* CharacterViewCell.swift in Sources */,
 				530F2AEA24D051EA0049C1DE /* AppDelegate.swift in Sources */,
 				530F2B2B24D06F280049C1DE /* Image.swift in Sources */,
 				530F2B3424D081F40049C1DE /* CharacterDataWrapper.swift in Sources */,
