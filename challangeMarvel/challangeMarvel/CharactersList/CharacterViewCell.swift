@@ -21,7 +21,7 @@ class CharacterViewCell: UICollectionViewCell {
         layer.cornerRadius = 8
     }
     
-    func setCharacterImage(url: String) {
+    func setImage(url: String) {
         if let apiUrl = URL(string: url) {
             httpClient.get(url: apiUrl) { result -> Void in
                 switch result {
@@ -38,7 +38,7 @@ class CharacterViewCell: UICollectionViewCell {
         }
     }
     
-    func setCharacterName(name: String) {
+    func setName(name: String) {
         characterName.text = name
     }
 }

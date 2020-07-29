@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailsViewController" customModule="challangeMarvel" customModuleProvider="target">
+            <connections>
+                <outlet property="characterDescription" destination="iRG-gW-ewo" id="HCo-lT-9uT"/>
+                <outlet property="characterImage" destination="6dX-s9-cqi" id="0FQ-Ml-Qdh"/>
+                <outlet property="characterName" destination="a5p-bO-JoD" id="UhW-W2-pRS"/>
+                <outlet property="collectionViewComics" destination="pEn-6x-GoK" id="K7n-Pt-zoW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iRG-gW-ewo">
+                    <rect key="frame" x="30" y="345" width="352" height="196"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6dX-s9-cqi">
+                    <rect key="frame" x="131" y="79" width="150" height="225"/>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-6x-GoK">
+                    <rect key="frame" x="0.0" y="585" width="414" height="268"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hkK-a3-bnj">
+                        <size key="itemSize" width="150" height="250"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBk-JX-BAT">
+                    <rect key="frame" x="30" y="549" width="352" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5p-bO-JoD">
+                    <rect key="frame" x="30" y="316" width="352" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iRG-gW-ewo" secondAttribute="trailing" constant="32" id="0yp-7S-MGL"/>
+                <constraint firstItem="VBk-JX-BAT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="59y-Om-efz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="a5p-bO-JoD" secondAttribute="bottom" constant="525" id="6An-tM-pyD"/>
+                <constraint firstItem="VBk-JX-BAT" firstAttribute="top" secondItem="iRG-gW-ewo" secondAttribute="bottom" constant="8" id="9HU-eF-Zb3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iRG-gW-ewo" secondAttribute="bottom" constant="321" id="Cnd-e1-dUD"/>
+                <constraint firstItem="6dX-s9-cqi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="131" id="CuK-Nb-mhL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6dX-s9-cqi" secondAttribute="trailing" constant="133" id="HU1-lC-ZQa"/>
+                <constraint firstItem="a5p-bO-JoD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Iay-MK-kz2"/>
+                <constraint firstItem="pEn-6x-GoK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="M9k-ey-Bnp"/>
+                <constraint firstItem="pEn-6x-GoK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OJe-Hp-n7n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6dX-s9-cqi" secondAttribute="bottom" constant="558" id="Ovh-Py-t08"/>
+                <constraint firstItem="iRG-gW-ewo" firstAttribute="top" secondItem="a5p-bO-JoD" secondAttribute="bottom" constant="8" id="Oz4-t5-mWD"/>
+                <constraint firstItem="a5p-bO-JoD" firstAttribute="top" secondItem="6dX-s9-cqi" secondAttribute="bottom" constant="12" id="h7W-5p-6RV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a5p-bO-JoD" secondAttribute="trailing" constant="32" id="k7c-lw-4Wc"/>
+                <constraint firstItem="pEn-6x-GoK" firstAttribute="top" secondItem="VBk-JX-BAT" secondAttribute="bottom" constant="15" id="l6L-m2-15p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VBk-JX-BAT" secondAttribute="bottom" constant="292" id="nfk-xp-Obb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VBk-JX-BAT" secondAttribute="trailing" constant="32" id="qbW-EX-8eg"/>
+                <constraint firstItem="iRG-gW-ewo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="t2l-wq-6Ny"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pEn-6x-GoK" secondAttribute="bottom" constant="9" id="uKh-J5-cI7"/>
+                <constraint firstItem="6dX-s9-cqi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="xRC-6C-uKw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
