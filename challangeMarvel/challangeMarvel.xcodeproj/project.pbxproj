@@ -41,6 +41,7 @@
 		530F2B4A24D19E520049C1DE /* CharactersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B1D24D058080049C1DE /* CharactersListInteractor.swift */; };
 		530F2B4B24D19E550049C1DE /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B2324D061680049C1DE /* CharactersListViewController.swift */; };
 		530F2B4C24D19F970049C1DE /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */; };
+		530F2B4E24D1A43E0049C1DE /* CharactersListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B4D24D1A43E0049C1DE /* CharactersListPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		530F2B4224D0A4890049C1DE /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
 		530F2B4324D0A4890049C1DE /* CharacterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewCell.xib; sourceTree = "<group>"; };
 		530F2B4624D19C390049C1DE /* CharactersListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListInteractorTests.swift; sourceTree = "<group>"; };
+		530F2B4D24D1A43E0049C1DE /* CharactersListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				530F2B4624D19C390049C1DE /* CharactersListInteractorTests.swift */,
 				530F2B0024D051EE0049C1DE /* CharactersListWorkerTests.swift */,
+				530F2B4D24D1A43E0049C1DE /* CharactersListPresenterTests.swift */,
 			);
 			path = CharactersListTests;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				530F2B4024D09B610049C1DE /* ComicList.swift in Sources */,
 				530F2B3C24D0993C0049C1DE /* CharactersListWorker.swift in Sources */,
 				530F2B0124D051EE0049C1DE /* CharactersListWorkerTests.swift in Sources */,
+				530F2B4E24D1A43E0049C1DE /* CharactersListPresenterTests.swift in Sources */,
 				530F2B4B24D19E550049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B3D24D09B590049C1DE /* CharacterDataWrapper.swift in Sources */,
 				530F2B3E24D09B5C0049C1DE /* CharacterDataContainer.swift in Sources */,
