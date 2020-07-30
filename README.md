@@ -38,6 +38,15 @@ For more information on vip architecture visit [**Clean Swift (VIP)**](https://m
 
 ### Screenshots
 
+<table style="width:100%">
+  <tr>
+    <td><img src="docs/list_1.png" alt="Marvel" width=400 height=375/></td>
+    <td><img src="docs/list_2.png" alt="Marvel" width=400 height=375/></td>
+    <td><img src="docs/details_1.png" alt="Marvel" width=400 height=375/></td>
+    <td><img src="docs/details_2.png" alt="Marvel" width=400 height=375/></td>
+  </tr>
+</table>
+
 ### Installation
 
 ### Author
