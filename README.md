@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo_marvel.png" align="center" height="128px" width="300px">
+</p>
+
 # Marvel Challange
 
 This is a technical challenge for a selection process for junior iOS developer.
@@ -18,7 +22,9 @@ This architecture was born with the intention of taking the weight of ViewContro
 
 For more information on vip architecture visit [**Clean Swift (VIP)**](https://medium.com/@leodegeus7/clean-swift-vip-como-organizar-melhor-nossos-códigos-f06762fc5cc2)
 
-<img width="600" alt="vip_architecture" src="https://miro.medium.com/max/1400/0*gH_ZFdMDaAmmzKjK.png" ><br /><br />
+<p align="center">
+  <img width="600" alt="vip_architecture" src="https://miro.medium.com/max/1400/0*gH_ZFdMDaAmmzKjK.png" align="center"><br /><br />
+</p>
 
 ### Requirements
 
