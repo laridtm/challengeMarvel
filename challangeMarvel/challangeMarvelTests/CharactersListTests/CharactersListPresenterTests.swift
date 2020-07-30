@@ -42,6 +42,12 @@ class CharactersListPresenterTests: XCTestCase {
         if let controller = controller {
             XCTAssertTrue(controller.showWasCalled)
         }
-        
+    }
+    
+    func testIfThePresenterIsCallingTheViewToShowMore() {
+        interactor?.loadMoreData()
+        if let controller = controller {
+            XCTAssertTrue(controller.appendWasCalled)
+        }
     }
 }
