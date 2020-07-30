@@ -49,6 +49,14 @@ For more information on vip architecture visit [**Clean Swift (VIP)**](https://m
 
 ### Installation
 
+Simply clone this repository or download its zip file to your computer, install its dependencies and run the project in Xcode.
+
+```bash
+$ git clone git@github.com:laridtm/challangeMarvel.git
+$ cd challangeMarvel
+$ open challangeMarvel/challangeMarvel.xcodeproj
+```
+
 ### Author
 
 | [![Larissa](https://avatars.githubusercontent.com/u/55598696?v=4&s=80)](https://github.com/laridtm/) | [@laridtm](https://github.com/laridtm/) |
