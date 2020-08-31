@@ -2,11 +2,11 @@
   <img src="docs/logo_marvel.png" align="center" height="128px" width="300px">
 </p>
 
-# Marvel Challange
+# Marvel Challenge
 
 This is a technical challenge for a selection process for junior iOS developer.
 
-## Challange Description
+## Challenge Description
 
 Create a mobile application using [**Marvel's public API**](https://developer.marvel.com)
 
