@@ -11,7 +11,7 @@ This is a technical challenge for a selection process for junior iOS developer.
 Create a mobile application using [**Marvel's public API**](https://developer.marvel.com)
 
 The application should list the Marvel characters on a screen with
-infinite scroll and detail each character on another screen (it's not
+infinite scroll and detail each character on another screen (it's not necessary to
 use all information provided in the API).
 
 ### Architecture
