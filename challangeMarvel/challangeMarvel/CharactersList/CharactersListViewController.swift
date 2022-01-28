@@ -1,40 +1,69 @@
-//
-//  CharactersListViewController.swift
-//  challangeMarvel
-//
-//  Created by Larissa Diniz on 28/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import UIKit
 
-protocol CharactersListView: class {
+protocol CharactersListView {
     func show(items: [Character])
     func append(items: [Character])
 }
 
-class CharactersListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CharactersListViewController: UIViewController {
+    private enum Layout {
+        static let estimatedCollectionViewItemSize = CGSize(width: 116, height: 194.5)
+    }
+    
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.estimatedItemSize = Layout.estimatedCollectionViewItemSize
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize
 
-    @IBOutlet weak var collectionView: UICollectionView!
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = .clear
+        collection.delegate = self
+        collection.dataSource = self
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.scrollIndicatorInsets = .zero
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.register(CharacterViewCell.self, forCellWithReuseIdentifier: "CharacterCell")
+        return collection
+    }()
     
     var characters: [Character] = []
     var interactor: CharactersListInteractorProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nib = UINib(nibName: "CharacterViewCell",bundle: nil)
-        self.collectionView.register(nib, forCellWithReuseIdentifier: "CharacterCell")
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        self.navigationController?.navigationBar.barStyle = .black
-        self.navigationController?.navigationBar.topItem?.title = "Marvel"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
+        buildLayout()
         interactor?.onViewLoad()
     }
     
+    func buildLayout() {
+        buildViewHierarchy()
+        setupConstraints()
+        configureViews()
+    }
+    
+    func buildViewHierarchy() {
+        view.addSubview(collectionView)
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+    }
+    
+    func configureViews() {
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.topItem?.title = "Marvel"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+}
+
+extension CharactersListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         characters.count
     }
@@ -49,15 +78,8 @@ class CharactersListViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let characterSelected: Character? = characters[indexPath.row]
-        if let characterDetails = characterSelected {
-            let controllerDetails = CharacterDetailsViewController(nibName: "CharacterDetailsViewController", bundle: nil)
-            let presenterDetails = CharacterDetailsPresenter(view: controllerDetails)
-            let workerDetails = CharacterDetailsWorker()
-            let interactorDetails = CharacterDetailsInteractor(presenter: presenterDetails, worker: workerDetails, character: characterDetails)
-            controllerDetails.interactor = interactorDetails
-            self.navigationController?.present(controllerDetails, animated: true, completion: nil)
-        }
+        let controllerDetails = CharacterDetailsFactory.make(character: characters[indexPath.row])
+        self.navigationController?.present(controllerDetails, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -68,7 +90,6 @@ class CharactersListViewController: UIViewController, UICollectionViewDelegate, 
 }
 
 extension CharactersListViewController: CharactersListView {
-    
     func show(items: [Character]) {
         self.characters = items
         DispatchQueue.main.async {
