@@ -6,14 +6,17 @@ protocol CharactersListView: class {
 }
 
 class CharactersListViewController: UIViewController {
+    private enum Layout {
+        static let estimatedCollectionViewItemSize = CGSize(width: 116, height: 194.5)
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.estimatedItemSize = Layout.estimatedCollectionViewItemSize
         layout.itemSize = UICollectionViewFlowLayout.automaticSize
 
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collection.backgroundColor = .clear
         collection.delegate = self
         collection.dataSource = self
@@ -30,9 +33,6 @@ class CharactersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let nib = UINib(nibName: "CharacterViewCell",bundle: nil)
-//        self.collectionView.register(nib, forCellWithReuseIdentifier: "CharacterCell")
-        
         buildLayout()
         interactor?.onViewLoad()
     }
@@ -41,7 +41,6 @@ class CharactersListViewController: UIViewController {
         buildViewHierarchy()
         setupConstraints()
         configureViews()
-//        configureStyles()
     }
     
     func buildViewHierarchy() {
@@ -50,8 +49,8 @@ class CharactersListViewController: UIViewController {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
