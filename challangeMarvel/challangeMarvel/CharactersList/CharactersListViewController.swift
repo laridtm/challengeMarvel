@@ -80,7 +80,7 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let characterSelected: Character? = characters[indexPath.row]
         if let characterDetails = characterSelected {
-            let controllerDetails = CharacterDetailsViewController(nibName: "CharacterDetailsViewController", bundle: nil)
+            let controllerDetails = CharacterDetailsViewController()
             let presenterDetails = CharacterDetailsPresenter(view: controllerDetails)
             let workerDetails = CharacterDetailsWorker()
             let interactorDetails = CharacterDetailsInteractor(presenter: presenterDetails, worker: workerDetails, character: characterDetails)
