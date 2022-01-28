@@ -1,6 +1,6 @@
 import UIKit
 
-protocol CharactersListView: class {
+protocol CharactersListView {
     func show(items: [Character])
     func append(items: [Character])
 }
@@ -78,15 +78,8 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let characterSelected: Character? = characters[indexPath.row]
-        if let characterDetails = characterSelected {
-            let controllerDetails = CharacterDetailsViewController()
-            let presenterDetails = CharacterDetailsPresenter(view: controllerDetails)
-            let workerDetails = CharacterDetailsWorker()
-            let interactorDetails = CharacterDetailsInteractor(presenter: presenterDetails, worker: workerDetails, character: characterDetails)
-            controllerDetails.interactor = interactorDetails
-            self.navigationController?.present(controllerDetails, animated: true, completion: nil)
-        }
+        let controllerDetails = CharacterDetailsFactory.make(character: characters[indexPath.row])
+        self.navigationController?.present(controllerDetails, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

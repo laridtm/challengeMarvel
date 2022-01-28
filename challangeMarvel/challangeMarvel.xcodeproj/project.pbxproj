@@ -61,6 +61,7 @@
 		530F2B7A24D20A200049C1DE /* CharacterDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */; };
 		530F2B7C24D20A830049C1DE /* CharacterDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */; };
 		B196E50827A374A6000AE17D /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50727A374A6000AE17D /* CharacterListFactory.swift */; };
+		B196E50A27A38759000AE17D /* CharacterDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		B196E50727A374A6000AE17D /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
+		B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				530F2B5A24D1B4CF0049C1DE /* CharacterDetailsPresenter.swift */,
 				530F2B5C24D1B6EC0049C1DE /* CharacterDetailsWorker.swift */,
 				530F2B5E24D1B7390049C1DE /* CharacterDetailsInteractor.swift */,
+				B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */,
 			);
 			path = CharacterDetails;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				530F2B2524D061680049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B3624D082390049C1DE /* CharacterDataContainer.swift in Sources */,
 				530F2B3224D071AF0049C1DE /* HTTPClient.swift in Sources */,
+				B196E50A27A38759000AE17D /* CharacterDetailsFactory.swift in Sources */,
 				530F2B4424D0A4890049C1DE /* CharacterViewCell.swift in Sources */,
 				530F2AEA24D051EA0049C1DE /* AppDelegate.swift in Sources */,
 				530F2B2B24D06F280049C1DE /* Image.swift in Sources */,
