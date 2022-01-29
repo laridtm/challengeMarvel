@@ -17,10 +17,9 @@ protocol CharacterDetailsWorkerProtocol: class {
 class CharacterDetailsWorker: CharacterDetailsWorkerProtocol {
     
     let httpClient = HTTPClient()
-    let authentication = Authentication()
     
     func getComics(url: String, completion: @escaping (([Comic]) -> Void)) {
-        let urlCredentials = authentication.addCredentials(url: url)
+        let urlCredentials = Authentication.formatUrlWithCredentials(url: url)
         
         if let apiUrl = URL(string: urlCredentials) {
             httpClient.get(url: apiUrl) { result -> Void in

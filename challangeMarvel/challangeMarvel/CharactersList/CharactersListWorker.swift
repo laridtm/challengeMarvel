@@ -22,10 +22,9 @@ class CharactersListWorker: CharactersListWorkerProtocol {
     var count = 0
     
     let httpClient = HTTPClient()
-    let authentication = Authentication()
     
     func get(url: String, completion: @escaping (([Character]) -> Void)) {
-        var urlCredentials = authentication.addCredentials(url: url)
+        var urlCredentials = Authentication.formatUrlWithCredentials(url: url)
         urlCredentials = addAPIParameters(url: urlCredentials, limit: 100, offset: 0)
         
         if let apiUrl = URL(string: urlCredentials) {
@@ -44,7 +43,7 @@ class CharactersListWorker: CharactersListWorkerProtocol {
     }
     
     func getMore(url: String, completion: @escaping (([Character]) -> Void)) {
-        var urlCredentials = authentication.addCredentials(url: url)
+        var urlCredentials = Authentication.formatUrlWithCredentials(url: url)
         urlCredentials = addAPIParameters(url: urlCredentials, limit: limit, offset: offset)
         
         if count == total {
