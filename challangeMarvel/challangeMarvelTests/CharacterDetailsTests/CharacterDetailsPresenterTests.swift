@@ -47,7 +47,7 @@ class CharacterDetailsPresenterTests: XCTestCase {
     }
     
     func testIfThePresenterIsCallingTheView() {
-        interactor?.onViewLoad()
+        interactor?.getCharacterDetails()
         if let controller = controller {
             XCTAssertTrue(controller.showCharacterWasCalled)
             XCTAssertTrue(controller.showComicsWasCalled)

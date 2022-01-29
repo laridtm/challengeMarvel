@@ -85,7 +85,7 @@ class CharacterDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLayout()
-        interactor?.onViewLoad()
+        interactor?.getCharacterDetails()
     }
     
     func buildLayout() {
@@ -154,6 +154,7 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterViewCell
         cell.configure(url: comics[indexPath.row].getComicImage(), name: comics[indexPath.row].title)
+        
         return cell
     }
 }

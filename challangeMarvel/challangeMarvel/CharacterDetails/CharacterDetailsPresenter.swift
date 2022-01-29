@@ -6,7 +6,7 @@ protocol CharacterDetailsPresentable {
     func show(comics: [Comic])
 }
 
-class CharacterDetailsPresenter: CharacterDetailsPresentable {
+final class CharacterDetailsPresenter: CharacterDetailsPresentable {
     private let view: CharacterDetailsView
     
     init(view: CharacterDetailsView) {

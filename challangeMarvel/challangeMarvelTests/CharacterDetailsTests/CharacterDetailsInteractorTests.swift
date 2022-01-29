@@ -47,7 +47,7 @@ class CharacterDetailsInteractorTests: XCTestCase {
     }
     
     func testIfTheInteractorIsCallingWorker() {
-        interactor?.onViewLoad()
+        interactor?.getCharacterDetails()
         if let worker = worker {
             XCTAssertTrue(worker.getComicsWasCalled)
             XCTAssertTrue(worker.decodeWasCalled)

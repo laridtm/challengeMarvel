@@ -252,9 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				530F2B5624D1AECA0049C1DE /* CharacterDetailsViewController.swift */,
-				530F2B5A24D1B4CF0049C1DE /* CharacterDetailsPresenter.swift */,
-				530F2B5C24D1B6EC0049C1DE /* CharacterDetailsWorker.swift */,
 				530F2B5E24D1B7390049C1DE /* CharacterDetailsInteractor.swift */,
+				530F2B5C24D1B6EC0049C1DE /* CharacterDetailsWorker.swift */,
+				530F2B5A24D1B4CF0049C1DE /* CharacterDetailsPresenter.swift */,
 				B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */,
 			);
 			path = CharacterDetails;

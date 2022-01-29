@@ -1,22 +1,13 @@
-//
-//  CharacterDetailsWorker.swift
-//  challangeMarvel
-//
-//  Created by Larissa Diniz on 29/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
-protocol CharacterDetailsWorkerProtocol: class {
+protocol CharacterDetailsWorkerProtocol {
     func getComics(url: String, completion: @escaping (([Comic]) -> Void))
     func decode(data: Data) -> [Comic]?
 }
 
-class CharacterDetailsWorker: CharacterDetailsWorkerProtocol {
-    
-    let httpClient = HTTPClient()
+final class CharacterDetailsWorker: CharacterDetailsWorkerProtocol {
+    private let httpClient = HTTPClient()
     
     func getComics(url: String, completion: @escaping (([Comic]) -> Void)) {
         let urlCredentials = Authentication.formatUrlWithCredentials(url: url)
