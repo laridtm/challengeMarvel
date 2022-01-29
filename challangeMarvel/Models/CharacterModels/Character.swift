@@ -1,12 +1,22 @@
-//
-//  Character.swift
-//  challangeMarvel
-//
-//  Created by Larissa Diniz on 28/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import Foundation
+
+struct CharacterDataContainer: Codable {
+    let offset: Int?
+    let limit: Int?
+    let total: Int?
+    let count: Int?
+    let results: [Character]?
+}
+
+struct CharacterDataWrapper: Codable {
+    let code: Int?
+    let status: String?
+    let copyright: String?
+    let attributionText: String?
+    let attributionHTML: String?
+    let data: CharacterDataContainer?
+    let etag: String?
+}
 
 public struct Character: Codable {
     let id: Int?
@@ -14,9 +24,9 @@ public struct Character: Codable {
     let description: String?
     let modified: String?
     let thumbnail: Image?
-    let comics: ComicList?
+    let comics: CharacterComicList?
     
-    init(id: Int?, name: String?, description: String?, modified: String?, thumbnail: Image?, comics: ComicList?) {
+    init(id: Int?, name: String?, description: String?, modified: String?, thumbnail: Image?, comics: CharacterComicList?) {
         self.id = id
         self.name = name
         self.description = description
@@ -28,7 +38,7 @@ public struct Character: Codable {
     func getCharacterImage() -> String {
         guard let urlPath = thumbnail?.path else { return "" }
         guard let urlExt = thumbnail?.ext else { return "" }
-        let urlImage = "\(urlPath)/portrait_xlarge.\(urlExt)"
-        return urlImage
+        
+        return "\(urlPath)/portrait_xlarge.\(urlExt)"
     }
 }

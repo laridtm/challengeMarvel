@@ -12,4 +12,3 @@ public enum CharacterDetailsFactory {
         return controller
     }
 }
-

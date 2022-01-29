@@ -1,23 +1,14 @@
-//
-//  CharactersListInteractor.swift
-//  challangeMarvel
-//
-//  Created by Larissa Diniz on 28/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import Foundation
 
 protocol CharactersListInteractorProtocol {
-    func onViewLoad()
-    func loadMoreData()
+    func getCharacters()
+    func getMoreCharacters()
 }
 
-class CharactersListInteractor: CharactersListInteractorProtocol {
-    
+final class CharactersListInteractor: CharactersListInteractorProtocol {
     private let presenter: CharactersListPresentable
     private let worker: CharactersListWorkerProtocol
-    var url: String = "http://gateway.marvel.com/v1/public/characters"
+    private var url: String = "http://gateway.marvel.com/v1/public/characters"
     private var items: [Character]
     
     init(presenter: CharactersListPresentable, worker: CharactersListWorkerProtocol) {
@@ -26,14 +17,14 @@ class CharactersListInteractor: CharactersListInteractorProtocol {
         self.items = []
     }
     
-    func onViewLoad() {
+    func getCharacters() {
         worker.get(url: url) { items in
             self.items = items
             self.presenter.show(items: items)
         }
     }
     
-    func loadMoreData() {
+    func getMoreCharacters() {
         worker.getMore(url: url) { items in
             self.items.append(contentsOf: items)
             self.presenter.append(items: items)

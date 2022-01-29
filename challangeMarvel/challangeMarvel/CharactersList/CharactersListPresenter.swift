@@ -5,7 +5,7 @@ protocol CharactersListPresentable {
     func append(items: [Character])
 }
 
-class CharactersListPresenter: CharactersListPresentable {
+final class CharactersListPresenter: CharactersListPresentable {
     let view: CharactersListView
     
     init(view: CharactersListView) {

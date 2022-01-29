@@ -34,7 +34,7 @@ class CharactersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLayout()
-        interactor?.onViewLoad()
+        interactor?.getCharacters()
     }
     
     func buildLayout() {
@@ -52,7 +52,7 @@ class CharactersListViewController: UIViewController {
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
     
@@ -70,10 +70,7 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterViewCell
-        cell.setImage(url: characters[indexPath.row].getCharacterImage())
-        if let characterName = characters[indexPath.row].name {
-            cell.setName(name: characterName)
-        }
+        cell.configure(url: characters[indexPath.row].getCharacterImage(), name: characters[indexPath.row].name)
         return cell
     }
     
@@ -84,7 +81,7 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
          if (indexPath.row == characters.count - 20) {
-            interactor?.loadMoreData()
+            interactor?.getMoreCharacters()
          }
     }
 }

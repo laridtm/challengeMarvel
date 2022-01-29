@@ -32,8 +32,6 @@ class CharacterViewCell: UICollectionViewCell {
         return label
     }()
     
-    let httpClient = HTTPClient()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         buildLayout()
@@ -44,18 +42,18 @@ class CharacterViewCell: UICollectionViewCell {
         super.init(coder: coder)
     }
     
-    func buildLayout() {
+    private func buildLayout() {
         buildViewHierarchy()
         setupConstraints()
     }
     
-    func buildViewHierarchy() {
+    private func buildViewHierarchy() {
         container.addSubview(characterImage)
         container.addSubview(characterName)
         contentView.addSubview(container)
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
@@ -67,7 +65,7 @@ class CharacterViewCell: UICollectionViewCell {
             characterImage.trailingAnchor.constraint(equalTo: container.trailingAnchor),
             characterImage.heightAnchor.constraint(equalToConstant: Layout.characterImageHeight),
             characterImage.widthAnchor.constraint(equalToConstant: Layout.characterImageWidth),
-//
+
             characterName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             characterName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             characterName.topAnchor.constraint(equalTo: characterImage.bottomAnchor),
@@ -75,24 +73,9 @@ class CharacterViewCell: UICollectionViewCell {
         ])
     }
     
-    func setImage(url: String) {
-        if let apiUrl = URL(string: url) {
-            httpClient.get(url: apiUrl) { result -> Void in
-                switch result {
-                case .failure:
-                    break
-                case .success(let data):
-                    DispatchQueue.main.async {
-                        let loadedImage = UIImage(data: data)
-                        self.characterImage.image = loadedImage
-                    }
-                    break
-                }
-            }
-        }
-    }
-    
-    func setName(name: String) {
+    func configure(url: String, name: String?) {
+        characterImage.setImage(url: url)
+        guard let name = name else { return }
         characterName.text = name
     }
 }

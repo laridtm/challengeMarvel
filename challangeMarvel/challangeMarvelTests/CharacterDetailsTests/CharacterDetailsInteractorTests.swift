@@ -15,11 +15,11 @@ class CharacterDetailsInteractorTests: XCTestCase {
     var presenter: CharacterDetailsPresentable?
     var controller: MockCharacterDetailsViewController?
     var character: Character?
-    var comics: ComicList?
+    var comics: CharacterComicList?
     
     override func setUp() {
         super.setUp()
-        comics = ComicList(available: nil, returned: nil, collectionURI: "http://gateway.marvel.com/v1/public/comics/21366", items: nil)
+        comics = CharacterComicList(available: nil, returned: nil, collectionURI: "http://gateway.marvel.com/v1/public/comics/21366", items: nil)
         character = Character(id: nil, name: "Spider-Man", description: nil, modified: nil, thumbnail: nil, comics: comics )
         
         controller = MockCharacterDetailsViewController()
@@ -47,7 +47,7 @@ class CharacterDetailsInteractorTests: XCTestCase {
     }
     
     func testIfTheInteractorIsCallingWorker() {
-        interactor?.onViewLoad()
+        interactor?.getCharacterDetails()
         if let worker = worker {
             XCTAssertTrue(worker.getComicsWasCalled)
             XCTAssertTrue(worker.decodeWasCalled)
