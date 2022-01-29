@@ -4,7 +4,7 @@
 
 # Marvel Challenge
 
-This is a technical challenge for a selection process for junior iOS developer.
+This is a technical challenge for a selection process for iOS developer.
 
 ## Challenge Description
 
