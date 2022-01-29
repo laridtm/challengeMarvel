@@ -38,7 +38,7 @@ class CharactersListInteractorTests: XCTestCase {
     }
     
     func testIfTheInteractorIsCallingWorker() {
-        interactor?.onViewLoad()
+        interactor?.getCharacters()
         if let worker = worker {
             XCTAssertTrue(worker.getWasCalled)
             XCTAssertTrue(worker.decodeWasCalled)
@@ -46,7 +46,7 @@ class CharactersListInteractorTests: XCTestCase {
     }
     
     func testIfTheInteractorIsCallingWorkerToGetMore() {
-        interactor?.loadMoreData()
+        interactor?.getMoreCharacters()
         if let worker = worker {
             XCTAssertTrue(worker.getMoreWasCalled)
             XCTAssertTrue(worker.addAPIParametersWasCalled)

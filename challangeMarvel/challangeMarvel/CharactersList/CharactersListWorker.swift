@@ -1,27 +1,18 @@
-//
-//  CharactersListWorker.swift
-//  challangeMarvel
-//
-//  Created by Larissa Diniz on 28/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import Foundation
 
-protocol CharactersListWorkerProtocol: class {
+protocol CharactersListWorkerProtocol {
     func get(url: String, completion: @escaping (([Character]) -> Void))
     func getMore(url: String, completion: @escaping (([Character]) -> Void))
     func decode(data: Data) -> [Character]?
 }
 
-class CharactersListWorker: CharactersListWorkerProtocol {
+final class CharactersListWorker: CharactersListWorkerProtocol {
+    private var offset: Int?
+    private var limit: Int?
+    private var total: Int?
+    private var count = 0
     
-    var offset: Int?
-    var limit: Int?
-    var total: Int?
-    var count = 0
-    
-    let httpClient = HTTPClient()
+    private let httpClient = HTTPClient()
     
     func get(url: String, completion: @escaping (([Character]) -> Void)) {
         var urlCredentials = Authentication.formatUrlWithCredentials(url: url)

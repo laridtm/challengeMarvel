@@ -34,7 +34,7 @@ class CharactersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLayout()
-        interactor?.onViewLoad()
+        interactor?.getCharacters()
     }
     
     func buildLayout() {
@@ -81,7 +81,7 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
          if (indexPath.row == characters.count - 20) {
-            interactor?.loadMoreData()
+            interactor?.getMoreCharacters()
          }
     }
 }
