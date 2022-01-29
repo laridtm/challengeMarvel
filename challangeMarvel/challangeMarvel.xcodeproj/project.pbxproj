@@ -62,6 +62,10 @@
 		530F2B7C24D20A830049C1DE /* CharacterDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */; };
 		B196E50827A374A6000AE17D /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50727A374A6000AE17D /* CharacterListFactory.swift */; };
 		B196E50A27A38759000AE17D /* CharacterDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */; };
+		B196E50D27A4AE89000AE17D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50C27A4AE88000AE17D /* UIImageView+Extension.swift */; };
+		B196E50E27A4B0F1000AE17D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50C27A4AE88000AE17D /* UIImageView+Extension.swift */; };
+		B196E50F27A4B101000AE17D /* CharacterDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */; };
+		B196E51027A4B110000AE17D /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50727A374A6000AE17D /* CharacterListFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +127,7 @@
 		530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsInteractorTests.swift; sourceTree = "<group>"; };
 		B196E50727A374A6000AE17D /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 		B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsFactory.swift; sourceTree = "<group>"; };
+		B196E50C27A4AE88000AE17D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +158,7 @@
 		530F2ADD24D051EA0049C1DE = {
 			isa = PBXGroup;
 			children = (
+				B196E50B27A4AE56000AE17D /* Common */,
 				530F2B6824D1F0320049C1DE /* Authentication */,
 				530F2B3024D0719D0049C1DE /* HTTPClient */,
 				530F2B2724D06D4A0049C1DE /* Models */,
@@ -317,6 +323,14 @@
 			path = CharacterDetailsTests;
 			sourceTree = "<group>";
 		};
+		B196E50B27A4AE56000AE17D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B196E50C27A4AE88000AE17D /* UIImageView+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +471,7 @@
 				530F2B2224D058300049C1DE /* CharactersListPresenter.swift in Sources */,
 				530F2B2524D061680049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B3624D082390049C1DE /* CharacterDataContainer.swift in Sources */,
+				B196E50D27A4AE89000AE17D /* UIImageView+Extension.swift in Sources */,
 				530F2B3224D071AF0049C1DE /* HTTPClient.swift in Sources */,
 				B196E50A27A38759000AE17D /* CharacterDetailsFactory.swift in Sources */,
 				530F2B4424D0A4890049C1DE /* CharacterViewCell.swift in Sources */,
@@ -483,7 +498,9 @@
 				530F2B4024D09B610049C1DE /* ComicList.swift in Sources */,
 				530F2B7124D2044A0049C1DE /* CharacterDetailsWorker.swift in Sources */,
 				530F2B0124D051EE0049C1DE /* CharactersListWorkerTests.swift in Sources */,
+				B196E50F27A4B101000AE17D /* CharacterDetailsFactory.swift in Sources */,
 				530F2B7C24D20A830049C1DE /* CharacterDetailsInteractorTests.swift in Sources */,
+				B196E51027A4B110000AE17D /* CharacterListFactory.swift in Sources */,
 				530F2B4E24D1A43E0049C1DE /* CharactersListPresenterTests.swift in Sources */,
 				530F2B7A24D20A200049C1DE /* CharacterDetailsPresenterTests.swift in Sources */,
 				530F2B3D24D09B590049C1DE /* CharacterDataWrapper.swift in Sources */,
@@ -492,6 +509,7 @@
 				530F2B3E24D09B5C0049C1DE /* CharacterDataContainer.swift in Sources */,
 				530F2B6F24D204440049C1DE /* CharacterDetailsViewController.swift in Sources */,
 				530F2B7224D2044D0049C1DE /* CharacterDetailsInteractor.swift in Sources */,
+				B196E50E27A4B0F1000AE17D /* UIImageView+Extension.swift in Sources */,
 				530F2B3A24D091390049C1DE /* HTTPClient.swift in Sources */,
 				530F2B7524D204620049C1DE /* ComicDataContainer.swift in Sources */,
 				530F2B5124D1A9790049C1DE /* CharactersListInteractor.swift in Sources */,

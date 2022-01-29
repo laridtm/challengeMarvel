@@ -3,7 +3,6 @@ import UIKit
 
 protocol CharacterDetailsPresentable {
     func show(character: Character)
-    func show(image: UIImage)
     func show(comics: [Comic])
 }
 
@@ -16,10 +15,6 @@ class CharacterDetailsPresenter: CharacterDetailsPresentable {
 
     func show(character: Character) {
         view.show(character: character)
-    }
-    
-    func show(image: UIImage) {
-        view.show(image: image)
     }
     
     func show(comics: [Comic]) {

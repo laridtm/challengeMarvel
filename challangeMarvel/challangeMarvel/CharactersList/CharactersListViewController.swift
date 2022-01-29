@@ -70,10 +70,7 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterViewCell
-        cell.setImage(url: characters[indexPath.row].getCharacterImage())
-        if let characterName = characters[indexPath.row].name {
-            cell.setName(name: characterName)
-        }
+        cell.configure(url: characters[indexPath.row].getCharacterImage(), name: characters[indexPath.row].name)
         return cell
     }
     

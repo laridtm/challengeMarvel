@@ -2,7 +2,6 @@ import UIKit
 
 protocol CharacterDetailsView {
     func show(character: Character)
-    func show(image: UIImage)
     func show(comics: [Comic])
 }
 
@@ -136,13 +135,7 @@ extension CharacterDetailsViewController: CharacterDetailsView {
     func show(character: Character) {
         characterName.text = character.name
         characterDescription.text = character.description
-        interactor?.getCharacterImage(url: character.getCharacterImage())
-    }
-    
-    func show(image: UIImage) {
-        DispatchQueue.main.async {
-            self.characterImage.image = image
-        }
+        characterImage.setImage(url: character.getCharacterImage())
     }
     
     func show(comics: [Comic]) {
@@ -160,10 +153,7 @@ extension CharacterDetailsViewController: UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterViewCell
-        cell.setImage(url: comics[indexPath.row].getComicImage())
-        if let comicTitle = comics[indexPath.row].title {
-            cell.setName(name: comicTitle)
-        }
+        cell.configure(url: comics[indexPath.row].getComicImage(), name: comics[indexPath.row].title)
         return cell
     }
 }
