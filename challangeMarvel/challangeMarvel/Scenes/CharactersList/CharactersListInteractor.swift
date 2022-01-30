@@ -31,7 +31,7 @@ final class CharactersListInteractor: CharactersListInteractorProtocol {
     func getMoreCharacters() {
         let total = parser.paginationParameters.total
         if total == 0 || parser.paginationParameters.count < total {
-           getCharacters()
+            getCharacters()
         }
     }
 }

@@ -3,6 +3,7 @@ import Foundation
 protocol MarvelAPIParserProtocol {
     var paginationParameters: MarvelAPIPaginationParameters { get }
     func parseToCharacters(data: Data) -> [Character]?
+    func parseToComics(data: Data) -> [Comic]?
 }
 
 struct MarvelAPIPaginationParameters {
@@ -30,6 +31,11 @@ final class MarvelAPIParser: MarvelAPIParserProtocol {
         
         paginationParameters.offset = paginationParameters.count
         
+        return result?.data?.results
+    }
+    
+    func parseToComics(data: Data) -> [Comic]? {
+        let result = try? JSONDecoder().decode(ComicDataWrapper.self, from: data)
         return result?.data?.results
     }
 }
