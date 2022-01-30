@@ -57,7 +57,6 @@ class CharacterDetailsInteractorTests: XCTestCase {
 }
 
 class MockCharacterDetailsWorker: CharacterDetailsWorkerProtocol {
-    
     var getCharacterImageWascalled = false
     var getComicsWasCalled = false
     var decodeWasCalled = false
