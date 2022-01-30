@@ -1,19 +1,10 @@
-//
-//  CharactersListInteractorTests.swift
-//  challangeMarvelTests
-//
-//  Created by Larissa Diniz on 29/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import XCTest
 
-class CharactersListInteractorTests: XCTestCase {
-    
-    var worker: MockCharactersListWorker?
-    var interactor: CharactersListInteractorProtocol?
-    var presenter: CharactersListPresentable?
-    var controller: MockCharactersListViewController?
+final class CharactersListInteractorTests: XCTestCase {
+    private var worker: MockCharactersListWorker?
+    private var interactor: CharactersListInteractorProtocol?
+    private var presenter: CharactersListPresentable?
+    private var controller: MockCharactersListViewController?
     
     override func setUp() {
         super.setUp()
@@ -101,5 +92,3 @@ class MockCharactersListViewController: CharactersListView {
         appendWasCalled = true
     }
 }
-
-

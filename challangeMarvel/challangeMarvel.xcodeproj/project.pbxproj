@@ -165,9 +165,8 @@
 		530F2AFF24D051EE0049C1DE /* challangeMarvelTests */ = {
 			isa = PBXGroup;
 			children = (
+				B183888327A7063A005EE7A3 /* ScenesTests */,
 				530F2B6B24D2039B0049C1DE /* AuthenticationTests */,
-				530F2B4824D19C3F0049C1DE /* CharactersListTests */,
-				530F2B7624D209780049C1DE /* CharacterDetailsTests */,
 				530F2B3724D0908D0049C1DE /* HTTPClientTests */,
 				530F2B0224D051EE0049C1DE /* Info.plist */,
 			);
@@ -278,6 +277,15 @@
 				B183888027A70210005EE7A3 /* CharacterDetailsFactoryTests.swift */,
 			);
 			path = CharacterDetailsTests;
+			sourceTree = "<group>";
+		};
+		B183888327A7063A005EE7A3 /* ScenesTests */ = {
+			isa = PBXGroup;
+			children = (
+				530F2B4824D19C3F0049C1DE /* CharactersListTests */,
+				530F2B7624D209780049C1DE /* CharacterDetailsTests */,
+			);
+			path = ScenesTests;
 			sourceTree = "<group>";
 		};
 		B196E50B27A4AE56000AE17D /* Common */ = {
