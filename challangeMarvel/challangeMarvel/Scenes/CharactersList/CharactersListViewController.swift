@@ -2,7 +2,6 @@ import UIKit
 
 protocol CharactersListView {
     func show(items: [Character])
-    func append(items: [Character])
 }
 
 class CharactersListViewController: UIViewController {
@@ -89,13 +88,6 @@ extension CharactersListViewController: UICollectionViewDelegate, UICollectionVi
 extension CharactersListViewController: CharactersListView {
     func show(items: [Character]) {
         self.characters = items
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
-    }
-    
-    func append(items: [Character]) {
-        self.characters.append(contentsOf: items)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

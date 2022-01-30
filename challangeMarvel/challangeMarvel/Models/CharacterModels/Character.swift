@@ -18,7 +18,7 @@ struct CharacterDataWrapper: Codable {
     let etag: String?
 }
 
-public struct Character: Codable {
+public struct Character: Codable, Equatable {
     let id: Int?
     let name: String?
     let description: String?
@@ -40,5 +40,9 @@ public struct Character: Codable {
         guard let urlExt = thumbnail?.ext else { return "" }
         
         return "\(urlPath)/portrait_xlarge.\(urlExt)"
+    }
+    
+    public static func == (lhs: Character, rhs: Character) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name && lhs.description == rhs.description
     }
 }
