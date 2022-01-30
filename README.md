@@ -57,6 +57,14 @@ $ cd challangeMarvel
 $ open challangeMarvel/challangeMarvel.xcodeproj
 ```
 
+### Next Steps
+
+* Handle error cases
+* Add code marks
+* Improve use of constrains with SnapKit library
+* Include UITests
+* Replace HTTPCliente class with an HTTP library
+
 ### Author
 
 | [![Larissa](https://avatars.githubusercontent.com/u/55598696?v=4&s=80)](https://github.com/laridtm/) | [@laridtm](https://github.com/laridtm/) |
