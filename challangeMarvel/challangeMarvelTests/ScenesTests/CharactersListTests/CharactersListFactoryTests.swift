@@ -1,6 +1,6 @@
 import XCTest
 
-class CharactersListFactoryTests: XCTestCase {
+final class CharactersListFactoryTests: XCTestCase {
     func testMake_ShouldReturnTheRightViewController() {
         let viewController = CharacterListFactory.make()
 
