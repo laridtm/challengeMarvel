@@ -2,7 +2,6 @@ import Foundation
 
 protocol CharactersListPresentable {
     func show(items: [Character])
-    func append(items: [Character])
 }
 
 final class CharactersListPresenter: CharactersListPresentable {
@@ -14,9 +13,5 @@ final class CharactersListPresenter: CharactersListPresentable {
 
     func show(items: [Character]) {
         view.show(items: items)
-    }
-    
-    func append(items: [Character]) {
-        view.append(items: items)
     }
 }

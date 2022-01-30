@@ -50,7 +50,7 @@ private extension CharactersListInteractor {
                 presenter.show(items: characters)
             } else {
                 self.items.append(contentsOf: characters)
-                self.presenter.append(items: characters)
+                self.presenter.show(items: self.items)
             }
         case .failure(let error):
             print("HandlerCharacterRequestError: \(error)")
