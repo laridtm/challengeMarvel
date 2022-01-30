@@ -49,6 +49,8 @@
 		530F2B7824D209B50049C1DE /* CharacterDetailsWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7724D209B50049C1DE /* CharacterDetailsWorkerTests.swift */; };
 		530F2B7A24D20A200049C1DE /* CharacterDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */; };
 		530F2B7C24D20A830049C1DE /* CharacterDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */; };
+		B183887F27A7009F005EE7A3 /* CharacterListFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183887E27A7009F005EE7A3 /* CharacterListFactoryTests.swift */; };
+		B183888127A70210005EE7A3 /* CharacterDetailsFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183888027A70210005EE7A3 /* CharacterDetailsFactoryTests.swift */; };
 		B196E50827A374A6000AE17D /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50727A374A6000AE17D /* CharacterListFactory.swift */; };
 		B196E50A27A38759000AE17D /* CharacterDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */; };
 		B196E50D27A4AE89000AE17D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196E50C27A4AE88000AE17D /* UIImageView+Extension.swift */; };
@@ -99,6 +101,8 @@
 		530F2B7724D209B50049C1DE /* CharacterDetailsWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsWorkerTests.swift; sourceTree = "<group>"; };
 		530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		B183887E27A7009F005EE7A3 /* CharacterListFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactoryTests.swift; sourceTree = "<group>"; };
+		B183888027A70210005EE7A3 /* CharacterDetailsFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsFactoryTests.swift; sourceTree = "<group>"; };
 		B196E50727A374A6000AE17D /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 		B196E50927A38759000AE17D /* CharacterDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsFactory.swift; sourceTree = "<group>"; };
 		B196E50C27A4AE88000AE17D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				530F2B4624D19C390049C1DE /* CharactersListInteractorTests.swift */,
 				530F2B0024D051EE0049C1DE /* CharactersListWorkerTests.swift */,
 				530F2B4D24D1A43E0049C1DE /* CharactersListPresenterTests.swift */,
+				B183887E27A7009F005EE7A3 /* CharacterListFactoryTests.swift */,
 			);
 			path = CharactersListTests;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				530F2B7724D209B50049C1DE /* CharacterDetailsWorkerTests.swift */,
 				530F2B7924D20A200049C1DE /* CharacterDetailsPresenterTests.swift */,
 				530F2B7B24D20A830049C1DE /* CharacterDetailsInteractorTests.swift */,
+				B183888027A70210005EE7A3 /* CharacterDetailsFactoryTests.swift */,
 			);
 			path = CharacterDetailsTests;
 			sourceTree = "<group>";
@@ -429,12 +435,14 @@
 				530F2B4724D19C390049C1DE /* CharactersListInteractorTests.swift in Sources */,
 				530F2B5424D1A9810049C1DE /* CharacterViewCell.swift in Sources */,
 				530F2B7824D209B50049C1DE /* CharacterDetailsWorkerTests.swift in Sources */,
+				B183887F27A7009F005EE7A3 /* CharacterListFactoryTests.swift in Sources */,
 				530F2B5024D1A9770049C1DE /* CharactersListViewController.swift in Sources */,
 				530F2B5224D1A97C0049C1DE /* CharactersListWorker.swift in Sources */,
 				530F2B3B24D098EE0049C1DE /* Character.swift in Sources */,
 				530F2B7024D204470049C1DE /* CharacterDetailsPresenter.swift in Sources */,
 				530F2B4124D09B640049C1DE /* Image.swift in Sources */,
 				530F2B6E24D204160049C1DE /* Authentication.swift in Sources */,
+				B183888127A70210005EE7A3 /* CharacterDetailsFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
