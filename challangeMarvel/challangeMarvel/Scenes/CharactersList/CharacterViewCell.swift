@@ -42,6 +42,12 @@ class CharacterViewCell: UICollectionViewCell {
         super.init(coder: coder)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        characterImage.image = nil
+        characterName.text = nil
+    }
+    
     private func buildLayout() {
         buildViewHierarchy()
         setupConstraints()
