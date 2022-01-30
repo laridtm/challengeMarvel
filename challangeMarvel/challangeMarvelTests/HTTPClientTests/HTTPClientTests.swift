@@ -1,17 +1,9 @@
-//
-//  HTTPClientTests.swift
-//  challangeMarvelTests
-//
-//  Created by Larissa Diniz on 28/07/20.
-//  Copyright © 2020 Larissa Diniz. All rights reserved.
-//
-
 import XCTest
 
-class HTTPClientTests: XCTestCase {
-    var subject: HTTPClient?
-    let session = MockURLSession()
-    var url: URL?
+final class HTTPClientTests: XCTestCase {
+    private var subject: HTTPClient?
+    private let session = MockURLSession()
+    private var url: URL?
     
     override func setUp() {
         super.setUp()
@@ -24,7 +16,7 @@ class HTTPClientTests: XCTestCase {
         url = nil
     }
     
-    func testGETRequestsTheURL() {
+    func testRequestedURL() {
         guard let url = url else { return }
         
         subject?.get(url: url) { result -> Void in }
@@ -32,7 +24,7 @@ class HTTPClientTests: XCTestCase {
         XCTAssertEqual(session.lastURL, url)
     }
     
-    func testGETReturnsData() {
+    func testGet_WithSuccessData_ShouldReturnData() {
         guard let url = url else { return }
         session.nextResponse = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
         let expect = expectation(description: "Wait for \(url) to load.")
@@ -54,7 +46,7 @@ class HTTPClientTests: XCTestCase {
         XCTAssertNotNil(data)
     }
     
-    func testGETReturnsError() {
+    func testGet_WithErrorData_ShouldReturnError() {
         guard let urlError = URL(string: "errorTest") else { return }
         let expect = expectation(description: "Wait for \(urlError) to load.")
         var error: Error?
@@ -74,7 +66,7 @@ class HTTPClientTests: XCTestCase {
         XCTAssertNotNil(error)
     }
     
-    func testGETWithAStatusCodeLessThan200ReturnsAnError() {
+    func testGet_WithStatusCodeLessThan200_ShouldReturnError() {
         guard let url = url else { return }
         session.nextResponse = HTTPURLResponse(url: url, statusCode: 199, httpVersion: nil, headerFields: nil)
         
@@ -91,7 +83,7 @@ class HTTPClientTests: XCTestCase {
         XCTAssertNotNil(error)
     }
     
-    func testGETWithAStatusCodeGreaterThan299ReturnsAnError() {
+    func testGet_WithStatusCodeGreaterThan299_ShouldReturnError() {
         guard let url = url else { return }
         session.nextResponse = HTTPURLResponse(url: url, statusCode: 300, httpVersion: nil, headerFields: nil)
         
@@ -109,9 +101,9 @@ class HTTPClientTests: XCTestCase {
     }
 }
 
-class MockURLSession: URLSessionProtocol {
+final class MockURLSession: URLSessionProtocol {
     private (set) var lastURL: URL?
-    var nextDataTask = MockURLSessionDataTask()
+    let nextDataTask = MockURLSessionDataTask()
     var nextData: Data?
     var nextError: NSError?
     var nextResponse: HTTPURLResponse?
@@ -136,7 +128,7 @@ class MockURLSession: URLSessionProtocol {
     }
 }
 
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
+final class MockURLSessionDataTask: URLSessionDataTaskProtocol {
     private (set) var resumeWasCalled = false
     
     func resume() {
